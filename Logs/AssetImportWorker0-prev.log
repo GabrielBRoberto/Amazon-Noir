@@ -1,0 +1,133 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.5f1 (8095aa901b9b) revision 8426922'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'en' Physical Memory: 16257 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.5f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Valdevino/Desktop/UnityProjects/Anhembi
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+57948
+Successfully changed project path to: C:/Users/Valdevino/Desktop/UnityProjects/Anhembi
+C:/Users/Valdevino/Desktop/UnityProjects/Anhembi
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 57.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.5f1 (8095aa901b9b)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Valdevino/Desktop/UnityProjects/Anhembi/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   
+    VRAM:     8088 MB
+    Driver:   27.21.14.6627
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003561 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 62.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.091 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001735 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.484 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1421 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 96.4 MB.
+System memory in use after: 96.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1895.
+Total: 4.555400 ms (FindLiveObjects: 0.344900 ms CreateObjectMapping: 0.315600 ms MarkObjects: 3.616900 ms  DeleteObjects: 0.275300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Sounds/Music, Piano, Playing, Dark, Ominous SND1801.wav
+  artifactKey: Guid(62d7a641122dabc439c332801bb87d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Music, Piano, Playing, Dark, Ominous SND1801.wav using Guid(62d7a641122dabc439c332801bb87d63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf060e56a971810ecfa1c987023b8768') in 0.155978 seconds
+  Import took 0.161605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Sounds/Tools, Hand, Axe, Chop Wood 6 SND29235.wav
+  artifactKey: Guid(40abf347712354641ac94b44b4396304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Tools, Hand, Axe, Chop Wood 6 SND29235.wav using Guid(40abf347712354641ac94b44b4396304) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afbffd6c5789128a62a98a6e6088fd04') in 0.022506 seconds
+  Import took 0.026886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Sounds
+  artifactKey: Guid(51d3f93d2c83eba40b6eeb96c53ffa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds using Guid(51d3f93d2c83eba40b6eeb96c53ffa74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17b720a1fb152ad290b536fcf8318161') in 0.016955 seconds
+  Import took 0.022031 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001413 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.470 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1411 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.9 MB.
+System memory in use after: 99.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1907.
+Total: 3.440000 ms (FindLiveObjects: 0.272400 ms CreateObjectMapping: 0.228100 ms MarkObjects: 2.782900 ms  DeleteObjects: 0.154800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 225.970941 seconds.
+  path: Assets/CutScenes/PISTAS CUTSCENES.jpg
+  artifactKey: Guid(c75c8413e9555a844949f65a0bd1970f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CutScenes/PISTAS CUTSCENES.jpg using Guid(c75c8413e9555a844949f65a0bd1970f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d18f142ecf5f1e4074bd625427fd0fc') in 0.192160 seconds
+  Import took 0.200068 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 299.057934 seconds.
+  path: Assets/CutScenes/Animation/CutScenes.controller
+  artifactKey: Guid(bd31f10d27666c743b6fa11e4ff6fd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CutScenes/Animation/CutScenes.controller using Guid(bd31f10d27666c743b6fa11e4ff6fd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a55e5eea0b5f0b67477a86fde9afabd2') in 0.023716 seconds
+  Import took 0.033786 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
