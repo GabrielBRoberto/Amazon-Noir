@@ -185,9 +185,64 @@ public class Itens : MonoBehaviour
                     other.gameObject.SetActive(false);
                 }
             }
-            if (CordaIsOnPlayer && other.gameObject.tag == "ObstaculoCorda")
+            if (CordaIsOnPlayer)
             {
-                //Função da corda
+                if (other.gameObject.tag == "CordaDescer1")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position -= new Vector3(1.079f, 2.1f, 0);
+                    }
+                }
+                if (other.gameObject.tag == "CordaDescer2")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position -= new Vector3(1.03f, 2.1f, .69f);
+                    }
+                }
+                if (other.gameObject.tag == "CordaDescer3")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position -= new Vector3(.98f, 2.1f, .73f);
+                    }
+                }
+                if (other.gameObject.tag == "CordaDescer4")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position -= new Vector3(-.99f, 2.1f, -.56f);
+                    }
+                }
+                if (other.gameObject.tag == "CordaSubir1")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position += new Vector3(1.079f, 2.1f, 0);
+                    }
+                }
+                if (other.gameObject.tag == "CordaSubir2")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position += new Vector3(1.03f, 2.1f, .69f);
+                    }
+                }
+                if (other.gameObject.tag == "CordaSubir3")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position += new Vector3(.98f, 2.1f, .73f);
+                    }
+                }
+                if ( other.gameObject.tag == "CordaSubir4")
+                {
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        gameObject.transform.position += new Vector3(-.99f, 2.1f, -.56f);
+                    }
+                } 
             }
         }
 

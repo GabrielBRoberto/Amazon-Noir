@@ -13,6 +13,14 @@ TagManager:
   - ObstaculoCorda
   - Light
   - Pistas
+  - CordaDescer1
+  - CordaDescer2
+  - CordaDescer3
+  - CordaDescer4
+  - CordaSubir1
+  - CordaSubir2
+  - CordaSubir3
+  - CordaSubir4
   layers:
   - Default
   - TransparentFX
