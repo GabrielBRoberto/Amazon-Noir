@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Itens : MonoBehaviour
@@ -10,6 +9,13 @@ public class Itens : MonoBehaviour
     GameObject[] ObjetosNoMapa;
     [SerializeField]
     GameObject[] Pistas;
+
+    [SerializeField]
+    Image[] pistasColetadasUI;
+    [SerializeField]
+    AudioSource[] efeitosSonoros;
+
+    public GameObject finalCutScene;
 
     bool LanternaIsActived;
     bool MachadoIsActived;
@@ -22,6 +28,8 @@ public class Itens : MonoBehaviour
     bool CordaIsOnPlayer;
 
     bool hasItem;
+
+    float timer = 3f;
 
     /*
      * Objetos
@@ -49,6 +57,10 @@ public class Itens : MonoBehaviour
 
             Pistas[i].SetActive(true);
         }
+        for (int i = 0; i < pistasColetadasUI.Length; i++)
+        {
+            pistasColetadasUI[i].enabled = false;
+        }
         LanternaIsActived = false;
         MachadoIsActived = false;
         PeDeCabraIsActived = false;
@@ -61,6 +73,13 @@ public class Itens : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (hasItem)
+        {
+            if (timer > 0)
+            {
+                timer -= Time.deltaTime;
+            }
+        }
         if (LanternaIsActived)
         {
             LanternaIsActived = false;
@@ -144,6 +163,13 @@ public class Itens : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     LanternaIsActived = true;
+                    
+                    efeitosSonoros[4].Play();
+                    if(timer < 0)
+                    {
+                        efeitosSonoros[4].Stop();
+                        timer = 3;
+                    }
                 }
             }
             if (other.gameObject.tag == "Machado")
@@ -151,6 +177,12 @@ public class Itens : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     MachadoIsActived = true;
+                    efeitosSonoros[4].Play();
+                    if (timer < 0)
+                    {
+                        efeitosSonoros[4].Stop();
+                        timer = 3;
+                    }
                 }
             }
             if (other.gameObject.tag == "Pe de cabra")
@@ -158,6 +190,7 @@ public class Itens : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     PeDeCabraIsActived = true;
+                    efeitosSonoros[4].Play();
                 }
             }
             if (other.gameObject.tag == "Corda")
@@ -165,6 +198,12 @@ public class Itens : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     CordaIsActived = true;
+                    efeitosSonoros[4].Play();
+                    if (timer < 0)
+                    {
+                        efeitosSonoros[4].Stop();
+                        timer = 3;
+                    }
                 }
             }
         }
@@ -176,6 +215,12 @@ public class Itens : MonoBehaviour
                 if (Input.GetKey(KeyCode.Mouse0))
                 {
                     other.gameObject.SetActive(false);
+                    efeitosSonoros[1].Play();
+                    if (timer < 0)
+                    {
+                        efeitosSonoros[1].Stop();
+                        timer = 3;
+                    }
                 }
             }
             if (PeDeCabraIsOnPlayer && other.gameObject.tag == "ObstaculoPeDeCabra")
@@ -183,6 +228,12 @@ public class Itens : MonoBehaviour
                 if (Input.GetKey(KeyCode.Mouse0))
                 {
                     other.gameObject.SetActive(false);
+                    efeitosSonoros[2].Play();
+                    if (timer < 0)
+                    {
+                        efeitosSonoros[2].Stop();
+                        timer = 3;
+                    }
                 }
             }
             if (CordaIsOnPlayer)
@@ -192,6 +243,12 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position -= new Vector3(1.079f, 2.1f, 0);
+                        efeitosSonoros[3].Play();
+                        if (timer < 0)
+                        {
+                            efeitosSonoros[2].Stop();
+                            timer = 3;
+                        }
                     }
                 }
                 if (other.gameObject.tag == "CordaDescer2")
@@ -199,6 +256,7 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position -= new Vector3(1.03f, 2.1f, .69f);
+                        efeitosSonoros[3].Play();
                     }
                 }
                 if (other.gameObject.tag == "CordaDescer3")
@@ -206,6 +264,7 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position -= new Vector3(.98f, 2.1f, .73f);
+                        efeitosSonoros[3].Play();
                     }
                 }
                 if (other.gameObject.tag == "CordaDescer4")
@@ -213,6 +272,7 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position -= new Vector3(-.99f, 2.1f, -.56f);
+                        efeitosSonoros[3].Play();
                     }
                 }
                 if (other.gameObject.tag == "CordaSubir1")
@@ -220,6 +280,7 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position += new Vector3(1.079f, 2.1f, 0);
+                        efeitosSonoros[3].Play();
                     }
                 }
                 if (other.gameObject.tag == "CordaSubir2")
@@ -227,6 +288,7 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position += new Vector3(1.03f, 2.1f, .69f);
+                        efeitosSonoros[3].Play();
                     }
                 }
                 if (other.gameObject.tag == "CordaSubir3")
@@ -234,6 +296,7 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position += new Vector3(.98f, 2.1f, .73f);
+                        efeitosSonoros[3].Play();
                     }
                 }
                 if ( other.gameObject.tag == "CordaSubir4")
@@ -241,17 +304,12 @@ public class Itens : MonoBehaviour
                     if (Input.GetKey(KeyCode.Mouse0))
                     {
                         gameObject.transform.position += new Vector3(-.99f, 2.1f, -.56f);
+                        efeitosSonoros[3].Play();
                     }
                 } 
             }
         }
 
-        if (other.gameObject.tag == "Pistas")
-        {
-            Debug.Log("Pista coletada");
-            other.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
-            other.gameObject.SetActive(false);
-        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -270,6 +328,29 @@ public class Itens : MonoBehaviour
         if (other.tag == "Corda")
         {
             CordaIsActived = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Pistas")
+        {
+            Debug.Log("Pista coletada");
+            other.GetComponent<DialogueTrigger>().TriggerDialogue();
+            
+            int j = 0;
+            pistasColetadasUI[j].enabled = true;
+            j++;
+
+            other.gameObject.SetActive(false);
+
+            for (int i = 0; i < pistasColetadasUI.Length; i++)
+            {
+                if(pistasColetadasUI[i].enabled == true)
+                {
+                    finalCutScene.GetComponent<DialogueTrigger>().TriggerDialogue();
+                }
+            }
         }
     }
 }

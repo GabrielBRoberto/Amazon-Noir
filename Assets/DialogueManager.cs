@@ -1,3 +1,4 @@
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
@@ -11,6 +12,12 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    public int cutScenes;
+
+    private float currentTimer = 1;
+
+    public bool lastCutscene;
+
     //Use this for initialization
     private void Start()
     {
@@ -20,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("CutSceneInicial", true);
+        animator.SetInteger("CutScenes", cutScenes);
 
         dialogueText.gameObject.SetActive(true);
 
@@ -61,15 +68,31 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         dialogueText.gameObject.SetActive(false);
-
-        animator.SetBool("CutSceneInicial", false);
+        animator.SetInteger("CutScenes", cutScenes + 1);
+        if (lastCutscene)
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.anyKey)
         {
-            DisplayNextSentence();
+            if (currentTimer < 0)
+            {
+                DisplayNextSentence();
+                currentTimer += 1;
+            }
+        }
+        if (currentTimer > 0)
+        {
+            currentTimer -= Time.deltaTime;
+        }
+
+        if(cutScenes == 11)
+        {
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }

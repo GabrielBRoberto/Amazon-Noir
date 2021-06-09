@@ -10,11 +10,8 @@ public class Pause : MonoBehaviour
     GameObject CutSceneUI;
     [SerializeField]
     GameObject PauseUI;
-    [SerializeField]
-    GameObject SettingsUI;
 
     bool pauseBool;
-    bool settingsBool;
 
     private void Start()
     {
@@ -22,11 +19,10 @@ public class Pause : MonoBehaviour
         CutSceneUI.SetActive(true);
         PauseUI.SetActive(false);
         pauseBool = false;
-        settingsBool = false;
         Time.timeScale = 1f;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (pauseBool == false)
         {
@@ -36,6 +32,7 @@ public class Pause : MonoBehaviour
                 CutSceneUI.SetActive(false);
                 PauseUI.SetActive(true);
                 Time.timeScale = 0f;
+                pauseBool = true;
             }
         }
         else
@@ -46,36 +43,17 @@ public class Pause : MonoBehaviour
                 CutSceneUI.SetActive(true);
                 PauseUI.SetActive(false);
                 pauseBool = false;
-                settingsBool = false;
                 Time.timeScale = 1f;
             }
         }
     }
-
-    public void Settings()
-    {
-        PauseUI.SetActive(false);
-        SettingsUI.SetActive(true);
-        settingsBool = true;
-        pauseBool = false;
-    }
     public void Back()
     {
-        if (settingsBool == true)
-        {
-            SettingsUI.SetActive(false);
-            PauseUI.SetActive(true);
-            settingsBool = false;
-        }
-        else
-        {
             slider.SetActive(true);
             CutSceneUI.SetActive(true);
             PauseUI.SetActive(false);
             pauseBool = false;
-            settingsBool = false;
             Time.timeScale = 1f;
-        }
     }
     public void Menu()
     {
